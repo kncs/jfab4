@@ -1,0 +1,32 @@
+{
+  "name": "jfab4",
+  "version": "1.0.0",
+  "description": "Module packaging JQuery, Font-Awesome, Bootstrap 4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean-bootstrap" : "rimraf bootstrap4",
+    "build-bootstrap" : "cross-env cp -r bower_components/bootstrap/dist bootstrap4",
+    "clean-fa" : "rimraf font-awesome",
+    "build-fa" : "cross-env cp -r bower_components/font-awesome/css font-awesome",
+    "clean-jquery" : "rimraf jquery",
+    "build-jquery" : "cross-env cp -r bower_components/jquery/dist jquery",
+    "clean" : "cross-env npm run clean-bootstrap && npm run clean-fa && npm run clean-jquery",
+    "build" : "cross-env npm run build-bootstrap && npm run build-fa && npm run build-jquery",
+    "compile" : "cross-env npm run clean && npm run build"
+  },
+  "keywords": [
+    "Jquery",
+    "Font-Awesome",
+    "Boostrap",
+    "4",
+    "Vendor",
+    "Lib"
+  ],
+  "author": "Kevin Clarens",
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^1.0.7",
+    "rimraf": "^2.5.2"
+  }
+}
